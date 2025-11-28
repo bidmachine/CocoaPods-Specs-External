@@ -1,0 +1,37 @@
+{
+  "name": "IronSourceBidMachineAdapter",
+  "version": "5.1.1.0",
+  "summary": "BidMachine Adapter",
+  "description": "Use this adapter to show BidMachine ads",
+  "homepage": "http://www.is.com/",
+  "license": {
+    "type": "Commercial",
+    "text": "https://platform.ironsrc.com/partners/terms-and-conditions-new-user"
+  },
+  "authors": {
+    "IronSource": "http://www.is.com/contact/"
+  },
+  "source": {
+    "http": "https://raw.githubusercontent.com/bidmachine/levelplay-ios-adapters/bidmachine-3.5-is-8.11/Adapters/BidMachine/5.1.1/ISBidMachineAdapter5.1.1.zip"
+  },
+  "source_files": "ISBidMachineAdapter.xcframework/**/*.{h,m}",
+  "public_header_files": "ISBidMachineAdapter.xcframework/**/*.h",
+  "preserve_paths": "ISBidMachineAdapter.xcframework",
+  "platforms": {
+    "ios": "12.0"
+  },
+  "pod_target_xcconfig": {
+    "VALID_ARCHS": "arm64 x86_64"
+  },
+  "vendored_frameworks": "ISBidMachineAdapter.xcframework",
+  "dependencies": {
+    "IronSourceSDK/Ads": [
+      "~> 8.11.0"
+    ],
+    "BidMachine": [
+      "= 3.5.0"
+    ]
+  },
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
+}
