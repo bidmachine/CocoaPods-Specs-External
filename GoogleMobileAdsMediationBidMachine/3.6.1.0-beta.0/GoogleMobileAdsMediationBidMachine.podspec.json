@@ -20,7 +20,7 @@
   "requires_arc": true,
   "source": {
     "git": "https://github.com/bidmachine/googleads-mobile-ios-mediation.git",
-    "branch": "main"
+    "branch": "bidmachine/adapter-banner-root-controller"
   },
   "static_framework": true,
   "swift_version": "5.0"
