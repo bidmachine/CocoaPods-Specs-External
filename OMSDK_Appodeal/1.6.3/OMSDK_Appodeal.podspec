@@ -21,14 +21,14 @@ Pod::Spec.new do |spec|
   spec.subspec 'Static' do |ss|
     ss.vendored_frameworks      = "release/Static/OMSDK_Appodeal.xcframework"
     ss.resource_bundles         = {
-      'OMSDK_Appodeal' => ['release/Resources/omsdk_appodeal_service.plist', 'release/Resources/PrivacyInfo.xcprivacy']
+      'OMSDK_Appodeal' => [
+        'release/Dynamic/OMSDK_Appodeal.xcframework/ios-arm64/**/PrivacyInfo.xcprivacy',
+        'release/Dynamic/OMSDK_Appodeal.xcframework/ios-arm64/**/omsdk_appodeal_service.plist'
+      ]
     }
   end
 
   spec.subspec 'Dynamic' do |ss|
     ss.vendored_frameworks      = "release/Dynamic/OMSDK_Appodeal.xcframework"
-    ss.resource_bundles         = {
-      'OMSDK_Appodeal' => ['release/Resources/omsdk_appodeal_service.plist', 'release/Resources/PrivacyInfo.xcprivacy']
-    }
   end
 end
