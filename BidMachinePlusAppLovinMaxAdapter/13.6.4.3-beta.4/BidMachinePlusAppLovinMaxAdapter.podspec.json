@@ -1,0 +1,57 @@
+{
+  "name": "BidMachinePlusAppLovinMaxAdapter",
+  "version": "13.6.4.3-beta.4",
+  "summary": "AppLovin MAX demand source for the BidMachine Plus SDK.",
+  "description": "AppLovin MAX demand source for the BidMachine Plus SDK.",
+  "homepage": "https://bidmachine.io",
+  "license": {
+    "type": "Commercial",
+    "text": "https://bidmachine.io/sdk-license-agreement/"
+  },
+  "authors": {
+    "BidMachine": "https://bidmachine.io"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "swift_versions": [
+    "5.9"
+  ],
+  "source": {
+    "http": "https://bidmachine-ios.s3.amazonaws.com/BidMachinePlusAppLovinMaxAdapter/13.6.4.3-beta.4/pod/BidMachinePlusAppLovinMaxAdapter.zip"
+  },
+  "cocoapods_version": ">= 1.12.0",
+  "static_framework": true,
+  "default_subspecs": "Static",
+  "user_target_xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
+  "dependencies": {
+    "AppLovinSDK": [
+      "= 13.6.4"
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "Static",
+      "source_files": "Sources/BidMachinePlusAppLovinMaxAdapter/**/*.swift",
+      "dependencies": {
+        "BidMachinePlusAdapterAPI/Static": [
+          ">= 0.2.0-alpha.4",
+          "< 0.2.0-beta.9"
+        ]
+      }
+    },
+    {
+      "name": "Dynamic",
+      "source_files": "Sources/BidMachinePlusAppLovinMaxAdapter/**/*.swift",
+      "dependencies": {
+        "BidMachinePlusAdapterAPI/Dynamic": [
+          ">= 0.2.0-alpha.4",
+          "< 0.2.0-beta.9"
+        ]
+      }
+    }
+  ],
+  "swift_version": "5.9"
+}
